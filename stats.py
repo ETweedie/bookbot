@@ -20,4 +20,10 @@ def character_count(file_text_string):
             characters[i] += 1
     
     return characters
-    
+
+# function to order the character dictionary and return it sorted
+def sort_dictionary(character_dict):
+    count_dict = {}
+    char_dict = {}
+
+    # loops to get each of the character and count values into the dictionaries
