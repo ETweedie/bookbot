@@ -1,5 +1,5 @@
 # Contains the functions to analyze the text
-
+# function to get the word count in the string from the text file
 def get_word_count(file_string):
     words = file_string.split()
     count = 0
@@ -7,3 +7,17 @@ def get_word_count(file_string):
         count += 1
     
     return count
+
+# function to get the count of every character in the text file
+def character_count(file_text_string):
+    characters = {}
+    file_string = file_text_string.lower()
+
+    for i in file_string:
+        if i not in characters:
+            characters[i] = 1
+        elif i in characters:
+            characters[i] += 1
+    
+    return characters
+    
