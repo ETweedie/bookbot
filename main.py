@@ -1,4 +1,4 @@
-from stats import get_word_count, character_count
+from stats import get_word_count, character_count, sort_dictionary
 
 def get_book_text(file_path):
     with open(file_path) as f:
@@ -13,7 +13,12 @@ def main():
     print("------------ Word Count ------------")
     print(f"{get_word_count(text)} words found in the document")
     print("------------ Character Count -----------")
-    print(character_count(text))
+    items = sort_dictionary(character_count(text))
+    for item in items:
+        if item["char"].isalpha():
+            print(f"{item["char"]}: {item["num"]}")
+        else:
+            continue
     print("============ END ============")
 
 main()

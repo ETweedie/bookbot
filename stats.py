@@ -23,7 +23,15 @@ def character_count(file_text_string):
 
 # function to order the character dictionary and return it sorted
 def sort_dictionary(character_dict):
-    count_dict = {}
-    char_dict = {}
+    sorted_characters = []
 
-    # loops to get each of the character and count values into the dictionaries
+    for key, value in character_dict.items():
+        char_num = {"char": key, "num": value}
+        sorted_characters.append(char_num)
+    
+    def sort_on(items):
+        return items["num"]
+    
+    sorted_characters.sort(reverse=True, key=sort_on)
+    return sorted_characters
+        
