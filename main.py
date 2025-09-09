@@ -11,7 +11,7 @@ def main():
     print("============ BOOKBOT ==============")
     print("Analyzing book found at books/frankenstein.txt")
     print("------------ Word Count ------------")
-    print(f"{get_word_count(text)} words found in the document")
+    print(f"Found {get_word_count(text)} total words ")
     print("------------ Character Count -----------")
     items = sort_dictionary(character_count(text))
     for item in items:
